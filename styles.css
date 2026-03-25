@@ -1,0 +1,430 @@
+/* CSS Variables for Premium Dark-Islamic Theme */
+:root {
+    --primary-color: #2b5840; /* Deep Islamic Green */
+    --secondary-color: #3e815d; /* Lighter Calming Green */
+    --accent-color: #e5b369; /* Soft Gold */
+    --bg-color: #f7f9f8; /* Soft Off-White/Grey */
+    --text-main: #2d3748;
+    --text-muted: #536279;
+    --white: #ffffff;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 15px 40px rgba(43, 88, 64, 0.15);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-white {
+    color: var(--white) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, rgba(43,88,64,0.9) 0%, rgba(62,129,93,0.9) 100%), url('https://www.transparenttextures.com/patterns/arabesque.png');
+    height: 100vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+    background-blend-mode: multiply;
+}
+
+.hero-content {
+    z-index: 2;
+    animation: fadeInDown 1.5s ease;
+    max-width: 850px;
+}
+
+.image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(229, 179, 105, 0.3);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    background-color: #fff;
+}
+
+.hero-section .title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--white);
+}
+
+.hero-section .subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.wave-divider .shape-fill {
+    fill: var(--bg-color);
+}
+
+/* --- Section Titles --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title i {
+    margin-left: 10px;
+    color: var(--accent-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* --- Memories Section --- */
+.memories-section {
+    padding: 90px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.memory-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.memory-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-color);
+    transition: var(--transition);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+}
+
+.memory-card:hover::before {
+    transform: scaleY(1);
+}
+
+.icon-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(62, 129, 93, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+
+.memory-card:hover .icon-box {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.memory-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* --- Prayers Section --- */
+.prayers-section {
+    position: relative;
+    padding: 100px 0;
+    background: var(--primary-color);
+    overflow: hidden;
+}
+
+.pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.relative {
+    position: relative;
+    z-index: 1;
+}
+
+.prayers-list {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.prayer-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 30px 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+
+.prayer-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-8px);
+}
+
+.quote-icon {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-left: 20px;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.prayer-item p {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+/* --- Sadaqah Section --- */
+.sadaqah-section {
+    padding: 100px 0;
+    background: var(--bg-color);
+}
+
+.counter-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.counter-display {
+    margin-bottom: 40px;
+}
+
+#tasbeeh-count {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 2px 2px 0px rgba(43, 88, 64, 0.1);
+}
+
+.counter-label {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.main-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 22px 45px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(43, 88, 64, 0.2);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.main-btn i {
+    font-size: 1.5rem;
+}
+
+.main-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(62, 129, 93, 0.3);
+}
+
+.main-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(43, 88, 64, 0.2);
+}
+
+/* --- Footer --- */
+footer {
+    background: #173022;
+    color: var(--white);
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.click-animation {
+    animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section .title {
+        font-size: 1.8rem;
+    }
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+    .image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .prayer-item {
+        padding: 25px;
+        flex-direction: column;
+    }
+    .quote-icon {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    #tasbeeh-count {
+        font-size: 4.5rem;
+    }
+    .main-btn {
+        font-size: 1.15rem;
+        padding: 18px 25px;
+    }
+}
