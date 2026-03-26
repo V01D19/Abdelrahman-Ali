@@ -2,14 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const tasbeehBtn = document.getElementById('tasbeeh-btn');
     const countDisplay = document.getElementById('tasbeeh-count');
     
-    // Initialize count to 0
-    let count = 0;
+    // Initialize count from localStorage or 0
+    let count = parseInt(localStorage.getItem('tasbeehCount')) || 0;
     
     // Display the initial count
     countDisplay.textContent = count;
 
     tasbeehBtn.addEventListener('click', () => {
         count++;
+        localStorage.setItem('tasbeehCount', count);
         countDisplay.textContent = count;
         
         // Add subtle animation on click
