@@ -146,6 +146,50 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2px;
 }
 
+/* --- Brother's Message Section --- */
+.brother-message-section {
+    padding: 90px 0 40px;
+    background-color: var(--bg-color);
+}
+
+.message-card {
+    background-color: #fdfcfb;
+    background-image: url('https://www.transparenttextures.com/patterns/rice-paper-2.png');
+    padding: 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.message-card:hover {
+    box-shadow: 0 15px 45px rgba(43, 88, 64, 0.08);
+}
+
+.message-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.message-content {
+    font-family: 'Amiri', serif;
+    font-size: 1.35rem;
+    line-height: 2.1;
+    color: var(--text-main);
+    text-align: justify;
+}
+
+.message-content p {
+    margin: 0;
+}
+
 /* --- Memories Section --- */
 .memories-section {
     padding: 90px 0;
